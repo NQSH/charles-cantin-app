@@ -4,7 +4,22 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  
+  - name: "page"
+    label: "Page"
+    folder: "content/pages"
+    files:
+    - label: "Home"
+      name: "home"
+      file: "content/home.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Background", name: "background", widget: "image"}
+    - label: "Contact"
+      name: "contact"
+      file: "content/contact.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Content", name: "content", widget: "string"}
   - name: "photo"
     label: "Photo"
     folder: "content/photos"
