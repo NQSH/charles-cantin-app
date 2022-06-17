@@ -7,7 +7,7 @@ collections:
   - name: "page"
     label: "Page"
     # folder: "content/pages"
-    fields:
+    files:
     - label: "Home"
       name: "home"
       file: "content/home.md"
