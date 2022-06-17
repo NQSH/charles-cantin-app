@@ -6,7 +6,6 @@ public_folder: img
 collections:
   - name: "page"
     label: "Page"
-    folder: "content/pages"
     files:
     - label: "Home"
       name: "home"
