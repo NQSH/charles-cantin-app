@@ -12,7 +12,7 @@ collections:
       file: "content/home.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
-        - { label: "Background", name: "background", widget: "image"}
+        - { label: "Background Image", name: "background_image", widget: "image"}
     - label: "Contact"
       name: "contact"
       file: "content/contact.md"
@@ -28,7 +28,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Category", name: "category", widget: "relation", collection: "category", value_field: "title", search_fields: ["title"] }
-      - { label: "Published At", name: "published_at", widget: "hidden", default: "{{date}}" }
+      - { label: "Published At", name: "published_at", widget: "date" }
   - name: "category"
     label: "Category"
     folder: "content/categories"
