@@ -7,7 +7,6 @@ collections:
   - name: "page"
     label: "Page"
     folder: "content/pages"
-    slug: "{{slug}}"
     files:
     - label: "Home"
       name: "home"
