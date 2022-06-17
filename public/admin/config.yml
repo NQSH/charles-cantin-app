@@ -25,7 +25,6 @@ collections:
     folder: "content/photos"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    format: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
@@ -35,7 +34,6 @@ collections:
     folder: "content/categories"
     create: true
     slug: "{{slug}}"
-    format: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
   - name: "pricing"
@@ -43,7 +41,6 @@ collections:
     folder: "content/pricing"
     create: true
     slug: "{{slug}}"
-    format: "json"
     fields:
       - { label: "Title", name: "title", widget: string }
       - { label: "Description", name: "description", widget: string }
