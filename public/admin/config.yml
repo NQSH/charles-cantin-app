@@ -11,14 +11,13 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Slogan", name: "slogan", widget: "string"}
         - { label: "Background Image", name: "background_image", widget: "image"}
     - label: "Contact"
       name: "contact"
       file: "content/contact.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Content", name: "content", widget: "string"}
+        - { label: "Message", name: "message", widget: "string"}
   - name: "photo"
     label: "Photo"
     folder: "content/photos"
