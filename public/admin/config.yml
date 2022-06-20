@@ -11,29 +11,13 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Slogan", name: "slogan", widget: "string"}
-        - { label: "Background Image", name: "background_image", widget: "image"}
+        - { label: "Slogan", name: "slogan", widget: "string" }
+        - { label: "Background Image", name: "background_image", widget: "image" }
     - label: "Contact"
       name: "contact"
       file: "content/contact.md"
       fields:
-        - { label: "Message", name: "message", widget: "string"}
-  - name: "photo"
-    label: "Photo"
-    folder: "content/photos"
-    create: true
-    slug: "{{image}}"
-    fields:
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Category", name: "category", widget: "relation", collection: "category", value_field: "title", search_fields: ["title"] }
-      - { label: "Published At", name: "published_at", widget: "date" }
-  - name: "category"
-    label: "Category"
-    folder: "content/categories"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
+        - { label: "Message", name: "message", widget: "string" }
   - name: "gallery"
     label: "Gallery"
     folder: "content/gallery"
