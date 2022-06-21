@@ -12,7 +12,7 @@ export default function Gallery({ categories, pictures, years }) {
         {
           pictures.map(picture => {
             return (
-              <Image src={picture.path} width={100} key={picture.path} />
+                <Image src={`/${picture.path}`}  width="100px" height="100px" key={picture.path} />
             );
           })
         }
