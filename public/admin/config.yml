@@ -18,19 +18,26 @@ collections:
       file: "content/contact.md"
       fields:
         - { label: "Message", name: "message", widget: "string" }
-  - name: "gallery"
-    label: "Gallery"
-    folder: "content/gallery"
+  - name: "photo"
+    label: "Photo"
+    folder: "content/photos"
     create: true
-    slug: "{{title}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - label: "Images"
-        name: "images"
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Category", name: "category", widget: "relation", collection: "meta", file: "categories", searchFields: "name", displayFields: "name", valueField: "slug" }
+      - { label: "Published At", name: "published_at", widget: "date" }
+  - name: "meta"
+    label: "Meta"
+    folder: "content"
+    files:
+      - label: "categories"
+        name: "Categories"
+        file: "content/categories"
         widget: "list"
         fields:
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Published At", name: "published_at", widget: "date" }
+          - { label: "Name", name: "name", widget: "string" }
   - name: "pricing"
     label: "Pricing"
     folder: "content/pricing"
@@ -40,11 +47,3 @@ collections:
       - { label: "Title", name: "title", widget: string }
       - { label: "Description", name: "description", widget: string }
       - { label: "Price", name: "price", widget: number, required: false }
-  - name: "test"
-    label: "Test"
-    folder: "content/test"
-    create: true
-    slug: "{{image.filename}}"
-    fields:
-      - { label: "Title", name: "title", widget: string }
-      - { label: "Image", name: "image", widget: image }
