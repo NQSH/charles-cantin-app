@@ -33,7 +33,7 @@ collections:
         file: "categories"
         search_fields: ["categories.*.name"]
         display_fields: ["categories.*.name"]
-        value_field: "categories.*.slug"
+        value_field: "categories.*.name"
       - { label: "Published At", name: "published_at", widget: "date" }
   - name: "meta"
     label: "Meta"
