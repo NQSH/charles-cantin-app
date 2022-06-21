@@ -39,14 +39,13 @@ collections:
       - { label: "Published At", name: "published_at", widget: "date" }
   - name: "meta"
     label: "Meta"
-    folder: "content"
     files:
       - label: "Categories"
         name: "categories"
-        file: "content/categories.md"
+        file: "content/categories.json"
         fields:
-          - label: "categories"
-            name: "Categories"
+          - label: "Categories"
+            name: "categories"
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string" }
