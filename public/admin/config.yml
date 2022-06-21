@@ -32,8 +32,8 @@ collections:
     label: "Meta"
     folder: "content"
     files:
-      - label: "categories"
-        name: "Categories"
+      - label: "Categories"
+        name: "categories"
         file: "content/categories"
         widget: "list"
         fields:
