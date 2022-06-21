@@ -40,3 +40,11 @@ collections:
       - { label: "Title", name: "title", widget: string }
       - { label: "Description", name: "description", widget: string }
       - { label: "Price", name: "price", widget: number, required: false }
+  - name: "test"
+    label: "Test"
+    folder: "content/test"
+    create: true
+    slug: "{{image.filename}}"
+    fields:
+      - { label: "Title", name: "title", widget: string }
+      - { label: "Image", name: "image", widget: image }
