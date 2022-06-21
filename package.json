@@ -21,7 +21,6 @@
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
-    "@netlify/plugin-nextjs": "^4.9.1",
     "frontmatter-markdown-loader": "^3.7.0"
   }
 }
