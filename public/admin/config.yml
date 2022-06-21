@@ -26,16 +26,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "relation",
-          collection: "meta",
-          file: "categories",
-          search_fields: ["categories.*.name"],
-          display_fields: ["categories.*.name"],
-          value_field: "categories.*.slug"
-        }
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        collection: "meta"
+        file: "categories"
+        search_fields: ["categories.*.name"]
+        display_fields: ["categories.*.name"]
+        value_field: "categories.*.slug"
       - { label: "Published At", name: "published_at", widget: "date" }
   - name: "meta"
     label: "Meta"
