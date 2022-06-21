@@ -32,9 +32,9 @@ collections:
           widget: "relation",
           collection: "meta",
           file: "categories",
-          searchFields: "name",
-          displayFields: "name",
-          valueField: "slug"
+          searchFields: "categories.*.name",
+          displayFields: "categories.*.name",
+          valueField: "categories.*.slug"
         }
       - { label: "Published At", name: "published_at", widget: "date" }
   - name: "meta"
