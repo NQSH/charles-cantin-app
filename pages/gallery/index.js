@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter"
+import Image from "next/image"
 
 export default function Gallery({ categories, pictures, years }) {
   
@@ -11,7 +12,7 @@ export default function Gallery({ categories, pictures, years }) {
         {
           pictures.map(picture => {
             return (
-              <img src={picture.path} width={100} key={picture.path} />
+              <Image src={picture.path} width={100} key={picture.path} />
             );
           })
         }
