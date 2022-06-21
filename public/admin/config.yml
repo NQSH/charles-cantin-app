@@ -26,7 +26,16 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Category", name: "category", widget: "relation", collection: "meta", file: "categories", searchFields: "name", displayFields: "name", valueField: "slug" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "relation",
+          collection: "meta",
+          file: "categories",
+          searchFields: "name",
+          displayFields: "name",
+          valueField: "slug"
+        }
       - { label: "Published At", name: "published_at", widget: "date" }
   - name: "meta"
     label: "Meta"
@@ -34,10 +43,13 @@ collections:
     files:
       - label: "Categories"
         name: "categories"
-        file: "content/categories"
-        widget: "list"
+        file: "content/categories.md"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
+          - label: "categories"
+            name: "Categories"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
   - name: "pricing"
     label: "Pricing"
     folder: "content/pricing"
