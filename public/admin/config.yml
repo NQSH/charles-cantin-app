@@ -42,7 +42,7 @@ collections:
     files:
       - label: "Categories"
         name: "categories"
-        file: "content/categories.json"
+        file: "content/meta/categories.md"
         fields:
           - label: "Categories"
             name: "categories"
