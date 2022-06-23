@@ -2,49 +2,47 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter"
 import Image from "next/image"
+import Album from "@components/Album";
 
-export default function Gallery({ categories, pictures, years }) {
+export default function Gallery({ photos, categories, years }) {
   
   return (
     <div style={{ flex: 1 }}>
       <h1>Gallery</h1>
-      <div>
-        {
-          pictures.map(picture => {
-            return (
-                <Image src={`/${picture.path}`}  width="100px" height="100px" key={picture.path} />
-            );
-          })
-        }
-      </div>
+      <Album photos={photos} />
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("content/gallery"));
+  const photoFiles = fs.readdirSync(path.join("content/photos"));
+  const photos = photoFiles.map(file => {
+    const content = fs.readFileSync(path.join("content/photos/", file), "utf-8");
+    const { data } = matter(content);
+    const { published_at } = data;
+    
+    const date = published_at.toString();
+    const slug = file.replace(".md", "");
+
+    return { 
+      ...data,
+      published_at: date,
+      slug,
+    };
+  })
   
-  const props = {
-    categories: [],
-    pictures: [],
-    years: []
-  };
+  const categoryContent = fs.readFileSync(path.join("content/meta/categories.md"), "utf-8");
+  const { data: categories } = matter(categoryContent);
 
-  files.forEach(file => {
-    const { data } = matter(fs.readFileSync(path.join("content/gallery", file), "utf-8"));
-    const { title: category, images } = data;
+  const years = photos.map(photo => new Date(photo.published_at).getFullYear())
+    .filter((value, index, result) => result.indexOf(value) === index)
+    .sort((a, b) => b - a);
 
-    props.categories.push(category);
-    images.forEach(image => {
-      const { image: path, published_at } = image;
-      const date = published_at.toString();
-      props.pictures.push({ path, published_at: date, category });
-      const year = new Date(published_at).getFullYear();
-      if(!props.years.includes(year)) props.years.push(year);
-    })
-  });
-  console.log(props)
   return  {
-    props
+    props: {
+      photos,
+      categories,
+      years,
+    }
   }
 }
