@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Link from "next/link";
 
 export default function Pricing({ services }) {
   return (
@@ -10,11 +11,21 @@ export default function Pricing({ services }) {
         services.map((service, index) => {
           const { title, description, price } = service;
           return (
-            <div key={index}>
-              <h2>{title}</h2>
-              <p>{description}</p>
-              <b>{price}</b>
-            </div>
+            <Link
+              href={{
+                pathname: "/contact",
+                query: service
+              }}
+              key={index}
+            >
+              <a>
+                <div>
+                  <h2>{title}</h2>
+                  <p>{description}</p>
+                  <b>{price}</b>
+                </div>
+              </a>
+            </Link>
           );
         })
       }
