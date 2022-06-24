@@ -1,13 +1,16 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Image from "next/image";
 
 export default function PhotoPage({ title, image, category, published_at }) {
   return (
     <div style={{ flex: 1 }}>
       <h1>Picture</h1>
       <h2>{title}</h2>
-      <p>{image}</p>
+      <div style={{ position: "relative", height: "500px", minWidth: "30%", flex: 1 }}>
+        <Image src={`/${image}`} layout="fill" objectFit="cover" />
+      </div>
       <b>{category}</b>
       <p>{published_at}</p>
     </div>
