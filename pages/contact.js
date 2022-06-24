@@ -4,6 +4,7 @@ export default function Contact({}) {
     <div style={{ flex: 1 }}>
       <h1>Contact</h1>
       <form name="contact" method="POST" data-netlify="true" action="/">
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
         </p>
