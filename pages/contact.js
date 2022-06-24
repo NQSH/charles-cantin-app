@@ -3,20 +3,20 @@ export default function Contact({}) {
   return (
     <div style={{ flex: 1 }}>
       <h1>Contact</h1>
-      <form name="contact" method="POST" data-netlify="true" action="/">
+      <form name="contact" method="POST" data-netlify="true" action="/contact?status=success">
         <input type="hidden" name="form-name" value="contact" />
-        <p>
+        <div>
           <label>Your Name: <input type="text" name="name" /></label>
-        </p>
-        <p>
+        </div>
+        <div>
           <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
+        </div>
+        <div>
           <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        </div>
+        <div>
+          <button type="submit">ENVOYER</button>
+        </div>
       </form>
     </div>
   );
