@@ -13,6 +13,10 @@ collections:
       fields:
         - { label: "Slogan", name: "slogan", widget: "string" }
         - { label: "Background Image", name: "background_image", widget: "image" }
+        - label: "Text color"
+          name: "color"
+          widget: "select"
+          options: ["light", "dark"]
     - label: "Contact"
       name: "contact"
       file: "content/contact.md"
