@@ -9,11 +9,13 @@ export default function Brand({}) {
   
   return (
     <div className={styles.container} data-iscurrenthome={currentMenu.id === "home"}>
-      <Link href="/" >
-        <a onClick={() => handleSetCurrentMenu("home")}>
-          <Logo style={{ color: "black" }} />
-        </a>
-      </Link>
+      <div className={styles.logo_container} data-iscurrenthome={currentMenu.id === "home"}>
+        <Link href="/" >
+          <a onClick={() => handleSetCurrentMenu("home")}>
+            <Logo style={{ color: currentMenu.id === "home" ? "white": "black" }} />
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }
