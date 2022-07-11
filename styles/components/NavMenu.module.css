@@ -1,0 +1,19 @@
+.container {
+  transition: .1s;
+}
+.container:hover {
+  transform: scale(1.1);
+  transition: .1s;
+}
+
+.link {
+  color: var(--color-neutral-1000);
+  font-size: 20px;
+  pointer-events: initial;
+}
+.link[data-iscurrent="true"] {
+  font-weight: bold;
+}
+.link[data-iscurrenthome="true"] {
+  color: black;
+}

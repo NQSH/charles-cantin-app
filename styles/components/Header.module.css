@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  height: 121px;
+  padding: 20px 30px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.title {
+  font-size: 70px;
+  color: var(--color-primary);
+  text-align: right;
+}
+
+.title[data-iscurrenthome="true"] {
+  display: none;
+}

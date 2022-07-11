@@ -1,0 +1,9 @@
+.container {
+  width: 192px;
+}
+
+.container[data-iscurrenthome="true"] {
+  width: 530px;
+  position: absolute;
+  border: 1px solid black;
+}
