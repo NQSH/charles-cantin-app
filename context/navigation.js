@@ -29,17 +29,24 @@ export default function NavigationProvider({ children }) {
     },
   ]
 
-  const [currentMenu, setCurrentMenu] = React.useState(() => {
-    const current = router.pathname.split("/")[1];
-    return current
-      ? menuList.find(menu => menu.id === current)
-      : menuList.find(menu => menu.id === "home")
+  const [currentMenu, setCurrentMenu] = React.useState({
+    id: "",
+    label: "",
+    href: "",
   });
 
   function handleSetCurrentMenu(id) {
     const menu = menuList.find(menu => menu.id === id);
     setCurrentMenu(menu);
   }
+
+  React.useEffect(() => {
+    const current = router.pathname.split("/")[1];
+    const menu = current
+      ? menuList.find(menu => menu.id === current)
+      : menuList.find(menu => menu.id === "home")
+    setCurrentMenu(menu);
+  }, []);
 
   return (
     <NavigationContext.Provider value={{ currentMenu, handleSetCurrentMenu, menuList }}>
