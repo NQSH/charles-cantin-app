@@ -14,7 +14,7 @@ export default function NavBar({}) {
 
   return (
     <div className={styles.container}>
-      <div
+      <nav
         className={styles.menu_list_container}
         data-iscurrenthome={currentMenu.id === "home"}
       >
@@ -40,7 +40,7 @@ export default function NavBar({}) {
             data-iscurrenthome={currentMenu.id === "home"}
           />
         </ul>
-      </div>
+      </nav>
       <div className={styles.social_container}>
         <div className={styles.social_wrapper}>
           <NavSocial src="/icon-social-facebook.png" />
