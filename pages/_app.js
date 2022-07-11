@@ -1,10 +1,13 @@
 import "@styles/globals.css";
 import Layout from "@components/Layout";
+import NavigationProvider from "context/navigation";
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <NavigationProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </NavigationProvider>
   );
 }
