@@ -15,5 +15,8 @@
   font-weight: bold;
 }
 .link[data-iscurrenthome="true"] {
-  color: black;
+  color: var(--color-neutral-100);
+}
+.link[data-iscurrent="true"][data-iscurrenthome="true"] {
+  color: white;
 }
