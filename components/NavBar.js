@@ -41,7 +41,7 @@ export default function NavBar({}) {
           />
         </ul>
       </nav>
-      <div className={styles.social_container}>
+      <div className={styles.social_container} data-iscurrenthome={currentMenu.id === "home"}>
         <div className={styles.social_wrapper}>
           <NavSocial src="/icon-social-facebook.png" />
           <NavSocial src="/icon-social-instagram.png" />

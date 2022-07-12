@@ -11,5 +11,6 @@
   width: 192px;
 }
 .logo_container[data-iscurrenthome="true"] {
-  width: 530px;
+  max-width: 530px;
+  width: 50vh;
 }

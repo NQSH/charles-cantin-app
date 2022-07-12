@@ -1,0 +1,56 @@
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  filter: brightness(.5);
+  z-index: -1;
+}
+
+.title_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 70px;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, .5);
+}
+.title_name {
+  font-family: Staatliches;
+  color: var(--color-tercary);
+  font-weight: normal;
+}
+.title_hyphen {
+  margin: 0px 20px;
+  color: var(--color-neutral-100);
+}
+.title_job {
+  color: white;
+}
+
+.gallery_link {
+  position: absolute;
+  bottom: 391px;
+}
+.gallery_link_text {
+  color: white;
+  text-decoration: underline;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 65px;
+  color: var(--color-neutral-500)
+}

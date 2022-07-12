@@ -6,13 +6,15 @@
   transition: .1s;
 }
 
-.link {
-  color: var(--color-neutral-1000);
+.link,
+.link:visited {
+  color: var(--color-neutral-500);
   font-size: 20px;
+  font-weight: 300;
   pointer-events: initial;
 }
 .link[data-iscurrent="true"] {
-  font-weight: bold;
+  color: var(--color-neutral-1000)
 }
 .link[data-iscurrenthome="true"] {
   color: var(--color-neutral-100);

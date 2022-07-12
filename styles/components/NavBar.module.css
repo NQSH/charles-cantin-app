@@ -47,3 +47,7 @@
   flex-direction: row;
   gap: 27px;
 }
+.social_container[data-iscurrenthome="true"] {
+  justify-content: center;
+  padding-bottom: calc(116px - 31px);
+}

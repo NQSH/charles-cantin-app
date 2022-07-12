@@ -10,7 +10,7 @@ export default function Header({}) {
   const { currentMenu, handle } = useNavigation();
 
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <Brand />
       <NavBar />
       <h1
@@ -19,6 +19,6 @@ export default function Header({}) {
       >
         {currentMenu.label}
       </h1>
-    </div>
+    </header>
   );
 }
