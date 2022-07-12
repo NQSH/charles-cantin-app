@@ -12,5 +12,6 @@
 }
 .logo_container[data-iscurrenthome="true"] {
   max-width: 530px;
+  min-width: 459.5px;
   width: 50vh;
 }
