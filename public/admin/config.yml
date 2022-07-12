@@ -11,7 +11,6 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Slogan", name: "slogan", widget: "string" }
         - { label: "Background Image", name: "background_image", widget: "image" }
         - label: "Text color"
           name: "color"
