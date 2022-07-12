@@ -15,7 +15,7 @@ export default function Home({ backgroundImage }) {
       <Head>
         <title>Accueil</title>
       </Head>
-      <main className={styles.container}>
+      <div className={styles.container}>
         <div className={styles.background} style={{ backgroundImage: `url(${backgroundImage})` }} />
         <span className={styles.title_wrapper}>
           <h2 className={styles.title_name}>Charles Cantin</h2>
@@ -28,7 +28,7 @@ export default function Home({ backgroundImage }) {
           </a>
         </Link>
         <p className={styles.copyright}>Copyright © Charles Cantin. Tous droits réservé</p>
-      </main>
+      </div>
     </div>
   );
 }
