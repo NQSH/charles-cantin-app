@@ -7,7 +7,7 @@ import Brand from "./Brand";
 import NavBar from "./NavBar";
 
 export default function Header({}) {
-  const { currentMenu, handle } = useNavigation();
+  const { currentMenu } = useNavigation();
 
   return (
     <header className={styles.container}>
