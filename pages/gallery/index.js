@@ -32,9 +32,19 @@ export default function Gallery({ photos, categories, years }) {
   
   return (
     <div className={styles.container}>
-      <FilterList title={`Catégories`} filters={categories.map(category => category.name)} side="left" onClickHandler={handleOnPressCategory} />
+      <FilterList
+        title={`Catégories`}
+        filters={categories.map(category => category.name)}
+        side="left" onClickHandler={handleOnPressCategory}
+        selectedFilters={filters.categories}
+      />
       <Album photos={photos} filters={filters} />
-      <FilterList title={`Collections`} filters={years} side="right" onClickHandler={handleOnPressYear} />
+      <FilterList
+        title={`Collections`}
+        filters={years}
+        side="right" onClickHandler={handleOnPressYear}
+        selectedFilters={filters.years}
+      />
     </div>
   );
 }
