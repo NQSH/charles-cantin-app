@@ -19,3 +19,35 @@
   cursor: pointer;
   font-size: 20px;
 }
+.filter[data-side="left"] {
+  text-align: left;
+  -webkit-transition: padding-left .2s ease-out;
+  -moz-transition: padding-left .2s ease-out;
+  -o-transition: padding-left .2s ease-out;
+  transition: padding-left .2s ease-out;
+}
+.filter[data-side="right"] {
+  text-align: right;
+  -webkit-transition: padding-right .2s ease-out;
+  -moz-transition: padding-right .2s ease-out;
+  -o-transition: padding-right .2s ease-out;
+  transition: padding-right .2s ease-out;
+}
+.filter:hover[data-side="left"] {
+  padding-left: 10px;
+}
+.filter:hover[data-side="right"] {
+  padding-right: 10px;
+}
+.filter[data-side="left"][data-isselected="true"]::before {
+  content: "|";
+  color: transparent;
+  background-color: var(--color-neutral-1000);
+  margin-right: 10px;
+}
+.filter[data-side="right"][data-isselected="true"]::after {
+  content: "|";
+  color: transparent;
+  background-color: var(--color-neutral-1000);
+  margin-left: 10px;
+}
