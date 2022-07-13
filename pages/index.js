@@ -1,7 +1,9 @@
-import styles from "@styles/pages/Home.module.css";7
+import styles from "@styles/pages/Home.module.css";
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+
 import { useNavigation } from "context/navigation";
 
 import Head from "next/head";
