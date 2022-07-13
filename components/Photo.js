@@ -5,11 +5,21 @@ import Link from "next/link";
 
 export default function Photo({ photo: { image, slug }, disabled }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      data-disabled={disabled}
+    >
       <Link href={`gallery/${slug}`}>
         <a>
-          <div style={{ position: "relative", height: "100%", minWidth: "100%" }}>
-            <Image src={`/${image}`} layout="fill" objectFit="cover" placeholder="blur" blurDataURL={`/${image}`} />
+          <div className={styles.image_container}>
+            <Image
+              src={`/${image}`}
+              alt={slug}
+              layout="fill"
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL={`/${image}`}
+            />
           </div>
         </a>
       </Link>
