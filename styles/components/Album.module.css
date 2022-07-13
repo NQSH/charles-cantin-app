@@ -7,4 +7,5 @@
   gap: 20px;
   overflow: scroll;
   overflow-x: hidden;
+  padding-right: 9px;
 }
