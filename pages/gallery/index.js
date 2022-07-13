@@ -1,8 +1,12 @@
+import styles from "@styles/pages/Gallery.module.css";
+
 import React from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter"
+
 import Album from "@components/Album";
+import FilterList from "@components/FilterList";
 
 export default function Gallery({ photos, categories, years }) {
   const [ filters, setFilters ] = React.useState({
@@ -27,23 +31,10 @@ export default function Gallery({ photos, categories, years }) {
   }
   
   return (
-    <div style={{ flex: 1 }}>
-      <h1>Gallery</h1>
-      <div>
-        {
-          categories.map(category => {
-            return <button onClick={() => handleOnPressCategory(category.name)} key={category.name}>{category.name}</button>
-          })
-        }
-      </div>
-      <div>
-        {
-          years.map(year => {
-            return <button onClick={() => handleOnPressYear(year)} key={year}>{year}</button>
-          })
-        }
-      </div>
+    <div className={styles.container}>
+      <FilterList title={`Catégories`} filters={categories.map(category => category.name)} side="left" onClickHandler={handleOnPressCategory} />
       <Album photos={photos} filters={filters} />
+      <FilterList title={`Collections`} filters={years} side="right" onClickHandler={handleOnPressYear} />
     </div>
   );
 }

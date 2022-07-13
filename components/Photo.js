@@ -1,9 +1,11 @@
+import styles from "@styles/components/Photo.module.css";
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Photo({ photo: { image, slug }, disabled }) {
   return (
-    <div style={{ height: "100px", minWidth: "30%", flex: 1, display: !disabled ? "block" : "none" }}>
+    <div className={styles.container}>
       <Link href={`gallery/${slug}`}>
         <a>
           <div style={{ position: "relative", height: "100%", minWidth: "100%" }}>

@@ -1,4 +1,5 @@
-import React from "react";
+import styles from "@styles/components/Album.module.css"
+
 import Photo from "./Photo";
 
 export default function Album({ photos, filters }) {
@@ -15,7 +16,7 @@ export default function Album({ photos, filters }) {
   }
 
   return (
-    <div style={{ display: "flex", maxWidth: "90%", flexWrap: "wrap", justifyContent: "space-between", gap: "10px" }}>
+    <div className={styles.container}>
       {
         photos.map((photo, index) => {
           return <Photo key={index} photo={photo} disabled={handleDisabled(photo)}/>
