@@ -19,6 +19,7 @@ export default function Photo({ photo: { image, slug }, disabled }) {
               objectFit="cover"
               placeholder="blur"
               blurDataURL={`/${image}`}
+              className={styles.image}
             />
           </div>
         </a>
