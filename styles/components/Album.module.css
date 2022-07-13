@@ -1,0 +1,10 @@
+.container {
+  max-width: calc(100% - 332px * 2);
+  max-height: calc(100% + 63px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
