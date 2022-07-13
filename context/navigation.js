@@ -39,14 +39,30 @@ export default function NavigationProvider({ children }) {
     const menu = menuList.find(menu => menu.id === id);
     setCurrentMenu(menu);
   }
+  
+  function getMenuById (id) {
+    return id
+      ? menuList.find(menu => menu.id === id)
+      : menuList.find(menu => menu.id === "home")
+  }
 
   React.useEffect(() => {
-    const current = router.pathname.split("/")[1];
-    const menu = current
-      ? menuList.find(menu => menu.id === current)
-      : menuList.find(menu => menu.id === "home")
-    setCurrentMenu(menu);
-  }, []);
+    const initialPath = router.pathname.split("/")[1];
+    const initialMenu = getMenuById(initialPath);
+    setCurrentMenu(initialMenu);
+
+    const handleRouteChange = (url) => {
+      const currentPath = url.split("/")[1];
+      const currentMenu = getMenuById(currentPath);
+      setCurrentMenu(currentMenu);
+    }
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange)
+    };
+  }, [])
 
   return (
     <NavigationContext.Provider value={{ currentMenu, handleSetCurrentMenu, menuList }}>
