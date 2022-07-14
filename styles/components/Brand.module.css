@@ -15,3 +15,10 @@
   min-width: 459.5px;
   width: 50vh;
 }
+
+.link {
+  color: var(--color-neutral-1000);
+}
+.link[data-iscurrenthome="true"] {
+  color: white;
+}
