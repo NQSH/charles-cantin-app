@@ -47,12 +47,12 @@ export default function NavigationProvider({ children }) {
   }
 
   React.useEffect(() => {
-    const initialPath = router.pathname.split("/")[1];
+    const initialPath = router.pathname.split(/[\/?]/)[1];
     const initialMenu = getMenuById(initialPath);
     setCurrentMenu(initialMenu);
 
     const handleRouteChange = (url) => {
-      const currentPath = url.split("/")[1];
+      const currentPath = url.split(/[\/?]/)[1];
       const currentMenu = getMenuById(currentPath);
       setCurrentMenu(currentMenu);
     }
