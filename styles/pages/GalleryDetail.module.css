@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  max-height: 791px;
+  padding-top: 63px;
+}
+
+.wrapper {
+  max-width: 1176px;
+}
+
+.image_container {
+  max-height: 706px;  
+  height: 66vh;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+.image {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.title {
+  margin-top: 18px;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--color-neutral-1000);
+}
+
+.category {
+  font-weight: 300;
+  color: var(--color-neutral-100);
+  position: absolute;
+  right: 18px;
+  bottom: 12px;
+}
+
+.date {
+  font-weight: 300;
+  color: var(--color-neutral-500);
+}
