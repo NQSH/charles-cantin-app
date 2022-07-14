@@ -15,11 +15,12 @@
   position: relative;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .1);
 }
 .image {
   max-height: 100%;
   object-fit: contain;
+  pointer-events: none;
 }
 
 .title {
