@@ -36,7 +36,7 @@ export default function NavBar({}) {
           }
           <div
             className={styles.menu_list_marker}
-            style={{ left: markerPosition }}
+            style={{ left: markerPosition - 3 }}
             data-iscurrenthome={currentMenu.id === "home"}
           />
         </ul>

@@ -9,7 +9,7 @@ export default function NavMenu({ href, label, onClickHandler, isCurrent, setMar
 
   React.useEffect(() => {
     if(!offset) {
-      const value = ref.current.offsetLeft + ref.current.offsetWidth / 2 - 2;
+      const value = ref.current.offsetLeft + ref.current.offsetWidth / 2;
       setOffset(value);
       isCurrent && setMarkerPosition(value);
     } else {
