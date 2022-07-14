@@ -7,28 +7,10 @@ import matter from "gray-matter"
 
 import Album from "@components/Album";
 import FilterList from "@components/FilterList";
+import { useFilters } from "context/filters";
 
 export default function Gallery({ photos, categories, years }) {
-  const [ filters, setFilters ] = React.useState({
-    categories: [],
-    years: [],
-  });
-
-  function handleOnPressCategory(value) {
-    const { categories } = filters;
-    setFilters({ ...filters, categories: handleSetFilters(categories, value) }); 
-  }
-  function handleOnPressYear(value) {
-    const { years } = filters;
-    setFilters({ ...filters, years: handleSetFilters(years, value)}); 
-  }
-  function handleSetFilters(filter, value) {
-    const index = filter.indexOf(value);
-    index === -1
-      ? filter.push(value)
-      : filter.splice(index, 1)
-    return filter;
-  }
+  const { filters, handleOnPressCategory, handleOnPressYear } = useFilters();
   
   return (
     <div className={styles.container}>
