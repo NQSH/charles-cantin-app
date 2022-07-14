@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 114px;
+  height: 100%;
+}
+
+.wrapper {
+  width: 778px;
+  max-height: calc(100vh - 238px - 30px);
+  overflow: hidden;
+  padding-right: 30px;
+}
+.wrapper:hover {
+  overflow-y: scroll;
+  padding-right: 22px;
+}
