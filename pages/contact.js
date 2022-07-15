@@ -18,15 +18,9 @@ export default function Contact({}) {
           action="/contact?status=success"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div>
-          <label>Your Name: <input type="text" name="name" /></label>
-        </div>
-        <div>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </div>
-        <div>
-          <label>Message: <textarea name="message"></textarea></label>
-        </div>
+          <InputText label={`Votre nom et prénom`} name={`name`} />
+          <InputText label={`Votre adresse e-mail`} name={`email`} />
+          <InputTextArea label={`Votre message`} name={`message`} />
           <div>
             <button type="submit">ENVOYER</button>
           </div>
