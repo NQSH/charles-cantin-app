@@ -15,14 +15,24 @@ export default function Contact({}) {
           name="contact"
           method="POST"
           data-netlify="true"
-          action="/contact?status=success"
+          action="/contact/success"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <InputText label={`Votre nom et prénom`} name={`name`} />
-          <InputText label={`Votre adresse e-mail`} name={`email`} />
+          <InputText
+            label={`Votre nom et prénom`}
+            name={`name`}
+            errorMessage={`Veuillez renseigner votre nom et prénom.`}
+            pattern={/^(?!\s*$).+/}
+          />
+          <InputText
+            label={`Votre adresse e-mail`}
+            name={`email`}
+            errorMessage={`L'adresse e-mail est invalide.`}
+            pattern={/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g}
+          />
           <InputTextArea label={`Votre message`} name={`message`} />
-          <div>
-            <button type="submit">ENVOYER</button>
+          <div className={styles.button_container}>
+            <button className={styles.button} type="submit">ENVOYER</button>
           </div>
         </form>
       </div>
