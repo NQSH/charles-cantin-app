@@ -29,7 +29,6 @@ export default function Home({ backgroundImage }) {
             <p className={styles.gallery_link_text}>Visiter la galerie</p>
           </a>
         </Link>
-        <p className={styles.copyright}>Copyright © Charles Cantin. Tous droits réservé</p>
       </div>
     </div>
   );
