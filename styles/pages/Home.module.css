@@ -49,9 +49,3 @@
   color: white;
   text-decoration: underline;
 }
-
-.copyright {
-  position: absolute;
-  bottom: 65px;
-  color: var(--color-neutral-500)
-}
