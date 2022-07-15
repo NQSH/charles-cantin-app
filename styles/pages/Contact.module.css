@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 138px;
+}
+
+.wrapper {
+  width: 419px;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.button_container {
+  display: flex;
+  justify-content: right;
+}
+.button {
+  width: 208px;
+  height: 56px;
+  color: white;
+  background-color: var(--color-secondary);
+  font-size: 20px;
+  border-radius: 4px;
+}

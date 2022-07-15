@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container[data-disabled="true"] {
+  display: none;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 65px;
+  color: var(--color-neutral-500)
+}
