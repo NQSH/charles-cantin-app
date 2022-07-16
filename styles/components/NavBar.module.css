@@ -30,7 +30,10 @@
   background-color: var(--color-neutral-1000);
   position: absolute;
   bottom: -10px;
-  transition: .5s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
 }
 .menu_list_marker[data-iscurrenthome="true"] {
   background-color: var(--color-neutral-100);
