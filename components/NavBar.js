@@ -10,7 +10,7 @@ import { useNavigation } from "context/navigation";
 export default function NavBar({}) {
   const { currentMenu, handleSetCurrentMenu, menuList } = useNavigation();
 
-  const [markerPosition, setMarkerPosition] = React.useState();
+  const [markerPosition, setMarkerPosition] = React.useState(0);
 
   return (
     <div className={styles.container}>
