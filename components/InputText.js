@@ -6,7 +6,7 @@ export default function InputText({ label, name, errorMessage, pattern }) {
   const [isFocused, isFocusedChange] = React.useState(false);
   const ref = React.useRef(null);
 
-  function handleChangeValue ({ target }) {
+  function handleChangeValue({ target }) {
     const { value } = target;
     if(!value.match(pattern)) {
       ref.current.setCustomValidity(errorMessage);
