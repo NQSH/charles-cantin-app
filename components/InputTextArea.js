@@ -29,8 +29,9 @@ export default function InputTextArea({ label, name, defaultValue = "" }) {
       </label>
       <textarea
         className={styles.input}
+        name={name}
         value={value}
-        onChange={event => setValue(event.current.value)}
+        onChange={event => setValue(event.target.value)}
         maxLength={500}
         onFocus={() => isFocusedChange(true)}
         onBlur={() => isFocusedChange(false)}

@@ -27,7 +27,8 @@ export default function InputText({ label, name, errorMessage, pattern }) {
       </label>
       <input
         className={styles.input}
-        type="text" name={name}
+        type="text"
+        name={name}
         onFocus={() => isFocusedChange(true)}
         onBlur={() => isFocusedChange(false)}
         onChange={handleChangeValue}
