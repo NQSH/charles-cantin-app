@@ -10,7 +10,7 @@ import FilterList from "@components/FilterList";
 import { useFilters } from "context/filters";
 
 export default function Gallery({ photos, categories, years }) {
-  const { filters, handleOnPressCategory, handleOnPressYear } = useFilters();
+  const { filters, handleOnPressCategory, handleOnPressYear, handleDeleteCategoryFilters, handleDeleteYearFilters } = useFilters();
   
   return (
     <div className={styles.container}>
@@ -19,6 +19,7 @@ export default function Gallery({ photos, categories, years }) {
         filters={categories.map(category => category.name)}
         side="left" onClickHandler={handleOnPressCategory}
         selectedFilters={filters.categories}
+        deleteFiltersHandler={handleDeleteCategoryFilters}
       />
       <Album photos={photos} filters={filters} />
       <FilterList
@@ -26,6 +27,7 @@ export default function Gallery({ photos, categories, years }) {
         filters={years}
         side="right" onClickHandler={handleOnPressYear}
         selectedFilters={filters.years}
+        deleteFiltersHandler={handleDeleteYearFilters}
       />
     </div>
   );

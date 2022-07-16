@@ -1,10 +1,20 @@
 import styles from "@styles/components/FilterList.module.css"
 
-export default function FilterList({ title, filters, side, onClickHandler, selectedFilters }) {
+export default function FilterList({ title, filters, side, onClickHandler, selectedFilters, deleteFiltersHandler }) {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
       <ul className={styles.list}>
+        {
+          selectedFilters.length !== 0 &&
+            <li
+              className={styles.delete}
+              data-side={side}
+              onClick={deleteFiltersHandler}
+            >
+              Supprimer
+            </li>
+        }
         {
           filters.map(filter => {
             return (

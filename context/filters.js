@@ -23,9 +23,29 @@ export default function FiltersProvider({ children }) {
       : filter.splice(index, 1)
     return filter;
   }
-
+  function handleDeleteCategoryFilters() {
+    setFilters({
+      ...filters,
+      categories: [],
+    })
+  }
+  function handleDeleteYearFilters() {
+    setFilters({
+      ...filters,
+      years: [],
+    })
+  }
+ 
   return (
-    <FiltersContext.Provider value={{ filters, handleOnPressCategory, handleOnPressYear }}>
+    <FiltersContext.Provider
+      value={{
+        filters,
+        handleOnPressCategory,
+        handleOnPressYear,
+        handleDeleteCategoryFilters,
+        handleDeleteYearFilters
+      }}
+    >
       {children}
     </FiltersContext.Provider>
   );
