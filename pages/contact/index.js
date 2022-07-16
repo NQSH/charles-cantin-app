@@ -2,8 +2,12 @@ import styles from "@styles/pages/Contact.module.css";
 
 import InputText from "@components/InputText";
 import InputTextArea from "@components/InputTextArea";
+import { useRouter } from "next/router";
 
 export default function Contact({}) {
+  const router = useRouter();
+  const { query } = router;
+  
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -30,7 +34,11 @@ export default function Contact({}) {
             errorMessage={`L'adresse e-mail est invalide.`}
             pattern={/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g}
           />
-          <InputTextArea label={`Votre message`} name={`message`} />
+          <InputTextArea
+            label={`Votre message`}
+            name={`message`}
+            defaultValue={query.service}
+          />
           <div className={styles.button_container}>
             <button className={styles.button} type="submit">ENVOYER</button>
           </div>

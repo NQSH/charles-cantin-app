@@ -9,7 +9,7 @@ export default function Service({ service }) {
       <Link
         href={{
           pathname: "/contact",
-          query: title
+          query: { service: title }
         }}
       >
         <a>
