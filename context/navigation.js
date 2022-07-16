@@ -40,7 +40,7 @@ export default function NavigationProvider({ children }) {
     setCurrentMenu(menu);
   }
   
-  function getMenuById (id) {
+  function getMenuById(id) {
     return id
       ? menuList.find(menu => menu.id === id)
       : menuList.find(menu => menu.id === "home")
