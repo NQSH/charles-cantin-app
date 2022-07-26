@@ -43,3 +43,7 @@
   font-weight: 300;
   color: var(--color-neutral-500);
 }
+
+@media only screen and (max-width: 1360px) {
+  
+}

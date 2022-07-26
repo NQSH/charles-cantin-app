@@ -1,6 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
 
+import HomeIcon from "../public/menu-home-icon.svg";
+import GalleryIcon from "../public/menu-gallery-icon.svg";
+import PricingIcon from "../public/menu-pricing-icon.svg";
+import ContactIcon from "../public/menu-contact-icon.svg";
+
 const NavigationContext = React.createContext();
 
 export default function NavigationProvider({ children }) {
@@ -11,21 +16,25 @@ export default function NavigationProvider({ children }) {
       id: "home",
       label: "Accueil",
       href: "/",
+      icon: HomeIcon,
     },
     {
       id: "gallery",
       label: "Galerie",
       href: "/gallery",
+      icon: GalleryIcon,
     },
     {
       id: "pricing",
       label: "Prestations",
       href: "/pricing",
+      icon: PricingIcon,
     },
     {
       id: "contact",
       label: "Contact",
       href: "/contact",
+      icon: ContactIcon,
     },
   ]
 

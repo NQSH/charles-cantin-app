@@ -3,7 +3,7 @@ import styles from "@styles/components/NavMenu.module.css";
 import React from "react";
 import Link from "next/link"
 
-export default function NavMenu({ href, label, onClickHandler, isCurrent, setMarkerPosition, isHomeCurrent }) {
+export default function NavMenu({ href, label, onClickHandler, isCurrent, setMarkerPosition, isHomeCurrent, icon: Icon, isNavOpenned }) {
   const ref = React.useRef(null);
   const [offset, setOffset] = React.useState();
 
@@ -25,9 +25,15 @@ export default function NavMenu({ href, label, onClickHandler, isCurrent, setMar
           className={styles.link}
           data-iscurrent={isCurrent}
           data-iscurrenthome={isHomeCurrent}
+          data-isnavopenned={isNavOpenned}
           ref={ref}
         >
-          {label}
+          <div className={styles.label_container}>
+            {label}
+          </div>
+          <div className={styles.icon_container}>
+            <Icon style={{ color: "white" }} />
+          </div>
         </a>
       </Link>
     </li>

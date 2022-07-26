@@ -38,3 +38,7 @@
 .input:focus {
   outline: none;
 }
+
+@media only screen and (max-width: 1360px) {
+  
+}

@@ -22,3 +22,13 @@
 .link[data-iscurrenthome="true"] {
   color: white;
 }
+
+@media only screen and (max-width: 1360px) {
+  .container[data-iscurrenthome="true"] {
+    top: 128px;
+  }
+
+  .logo_container {
+    width: 129px;
+  } 
+}

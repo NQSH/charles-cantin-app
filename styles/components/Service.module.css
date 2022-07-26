@@ -32,3 +32,7 @@
   color: var(--color-neutral-1000);
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 1360px) {
+  
+}

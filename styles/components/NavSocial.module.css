@@ -1,3 +1,9 @@
 .link {
   pointer-events: initial;
 }
+
+@media only screen and (max-width: 1360px) {
+  .link[data-isnavopenned="false"] {
+    display: none;
+  }
+}

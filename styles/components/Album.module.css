@@ -9,3 +9,7 @@
   overflow-x: hidden;
   padding: 6px 9px 20px 3px;
 }
+
+@media only screen and (max-width: 1360px) {
+  
+}

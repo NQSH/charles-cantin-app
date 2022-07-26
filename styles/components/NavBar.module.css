@@ -23,6 +23,7 @@
   gap: 60px;
   height: 101px;
 }
+
 .menu_list_marker {
   width: 6px;
   height: 6px;
@@ -47,12 +48,97 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
+.social_container[data-iscurrenthome="true"] {
+  justify-content: center;
+  padding-bottom: calc(116px - 31px);
+}
 .social_wrapper {
   display: flex;
   flex-direction: row;
   gap: 27px;
 }
-.social_container[data-iscurrenthome="true"] {
-  justify-content: center;
-  padding-bottom: calc(116px - 31px);
+
+.toggle_nav_button_container {
+  display: none;
+}
+
+@media only screen and (max-width: 1360px) {
+  .container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 28px;
+    -webkit-transition: background-color .2s ease;
+    -moz-transition: background-color .2s ease;
+    -o-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+  }
+  .container[data-isnavopenned="true"] {
+    background-color: rgba(0, 0, 0, .6);
+    pointer-events: initial;
+  }
+  
+  .menu_list_container {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+  }
+  .menu_list_container[data-iscurrenthome="true"] {
+    padding-right: 10px;
+  }
+  
+  .menu_list {
+    position: static;
+    flex: 4;
+    gap: 0px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu_list_marker {
+    display: none;
+  }
+
+  .social_container {
+    height: auto;
+    min-height: auto;
+    padding: 0px 10px;
+  }
+  .social_container[data-iscurrenthome="true"] {
+    justify-content: right;
+    padding-bottom: 0px;
+  }
+  .social_wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 34px 0px;
+  }
+  .social_offset {
+    flex: 4;
+  }
+
+  .toggle_nav_button_container{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toggle_nav_button {
+    pointer-events: initial;
+    width: 30px;
+  }
 }
