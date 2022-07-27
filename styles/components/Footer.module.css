@@ -11,9 +11,12 @@
 }
 
 .copyright {
-  color: var(--color-neutral-500)
+  color: var(--color-neutral-500);
+  text-align: center;
 }
 
 @media only screen and (max-width: 1360px) {
-  
+  .container[data-disabled="false"] {
+    bottom: 100px;
+  }
 }

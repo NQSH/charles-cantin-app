@@ -64,7 +64,7 @@
 
 @media only screen and (max-width: 1360px) {
   .container {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0px;
@@ -110,7 +110,7 @@
 
   .social_container {
     height: auto;
-    min-height: auto;
+    min-height: none;
     padding: 0px 10px;
   }
   .social_container[data-iscurrenthome="true"] {
