@@ -8,12 +8,12 @@
 }
 
 .main {
-  min-height: 809px;
+  min-height: 808px;
 }
 
 @media only screen and (max-width: 1360px) {
   .container {
-    min-height: 100vw;
+    min-height: 100vh;
   }
   .main {
     min-height: 0px;
