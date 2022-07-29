@@ -15,7 +15,9 @@
   .container {
     order: 2;
     min-width: 100%;
+    max-height: calc(100vh - 64px - 79.61px - 19.5px);
     gap: 18px;
-    padding: 25.5px 9px 20px 9px;
+    padding: 6px 9px 20px 9px;
+    margin-top: 19.5px;
   }
 }
