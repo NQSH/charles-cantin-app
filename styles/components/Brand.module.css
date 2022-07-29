@@ -25,7 +25,6 @@
 
 @media only screen and (max-width: 1360px) {
   .container[data-iscurrenthome="true"] {
-    /* top: 128px; */
     top: calc(128 / 896 * 100vh);
   }
 
@@ -36,5 +35,11 @@
     width: 284px;
     max-width: 90%;
     min-width: 0px;
+  }
+}
+
+@media only screen and (max-width: 1360px) and (max-height: 600px) {
+  .logo_container[data-iscurrenthome="true"] {
+    width: 40vh;
   }
 }
