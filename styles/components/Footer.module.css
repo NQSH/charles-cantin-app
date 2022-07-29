@@ -20,3 +20,9 @@
     bottom: 100px;
   }
 }
+
+@media only screen and (max-width: 1360px) and (max-height: 600px) {
+  .container[data-disabled="false"] {
+    bottom: 10vh;
+  }
+}
