@@ -7,6 +7,7 @@
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 18px;
+  pointer-events: none;
 }
 
 .list {
@@ -66,5 +67,89 @@
 }
 
 @media only screen and (max-width: 1360px) {
-  
+  .container {
+    order: 1;
+    width: 50%;
+    padding: 0px 24.5px;
+    position: relative;
+  }
+
+  .title {
+    color: var(--color-neutral-1000);
+    font-family: "roboto";
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 7px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid var(--color-neutral-500);
+    display: flex;
+    align-items: flex-end;
+    pointer-events: all;
+  }
+  .title_arrow {
+    width: 0;
+    height: 0;
+    border-left: 8.23px solid transparent;
+    border-right: 8.23px solid transparent;
+    border-top: 16.46px solid var(--color-neutral-1000);
+    transform: scaleY(.5);
+    -webkit-transition: transform .2s ease-out;
+    -moz-transition: transform .2s ease-out;
+    -o-transition: transform .2s ease-out;
+    transition: transform .2s ease-out;
+    margin-left: auto;
+  }
+  .title_arrow[data-isopenned="true"] {
+    transform: scaleY(.5) rotate(180deg);
+  }
+
+  .list {
+    position: absolute;
+    padding-left: 15px;
+    background-color: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(10px);
+    width: calc(100% - 24.5px * 2);
+    border-radius: 0px 0px 4px 4px;
+    z-index: 1;
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    transition: .2s ease-out;
+  }
+  .list[data-isopenned="true"] {
+    padding-top: 18px;
+    max-height: 100vh;
+  }
+
+  .filter {
+    font-weight: 300;
+  }
+  .filter[data-side="right"] {
+    text-align: left;
+  }
+  .filter:hover[data-side="left"] {
+    padding-left: 0px;
+  }
+  .filter:hover[data-side="right"] {
+    padding-right: 0px;
+  }
+  .filter[data-side="right"][data-isselected="true"]::after {
+    content: "";
+    color: transparent;
+    background-color: var(--color-neutral-1000);
+    margin-left: 10px;
+  }
+  .filter[data-side="right"][data-isselected="true"]::before {
+    content: "|";
+    color: transparent;
+    background-color: var(--color-neutral-1000);
+    margin-right: 10px;
+  }
+
+  .delete[data-side="right"] {
+    text-align: left;
+  }
 }
