@@ -16,6 +16,6 @@
     min-height: 100vh;
   }
   .main {
-    min-height: 0px;
+    min-height: calc(100vh - 79.61px - 8px);
   }
 }
