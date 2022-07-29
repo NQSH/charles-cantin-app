@@ -61,7 +61,7 @@ export default function NavBar({}) {
           <a className={styles.toggle_nav_button}>
             {
               !isNavOpenned
-                ? <NavClosedIcon style={{ color: currentMenu.id === "home" ? "white" : "black" }} />
+                ? <NavClosedIcon style={{ color: currentMenu.id === "home" ? "white" : "var(--color-neutral-1000)" }} />
                 : <NavOpennedIcon style={{ color: "white" }} />
             }
           </a>
