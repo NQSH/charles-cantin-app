@@ -1,38 +1,38 @@
 .container {
-  -webkit-transition: .5s ease;
-  -moz-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
 }
 .container[data-iscurrenthome="true"] {
-  -webkit-transition: .5s ease;
-  -moz-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
 }
 .logo_container {
-  -webkit-transition: .5s ease;
-  -moz-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
 }
 .logo_container[data-iscurrenthome="true"] {
-  -webkit-transition: .5s ease;
-  -moz-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
 }
 .link {
-  -webkit-transition: .5s ease;
-  -moz-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
 }
 .link[data-iscurrenthome="true"] {
-  -webkit-transition: .5s ease;
-  -moz-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
 }
 
 .container[data-iscurrenthome="true"] {
