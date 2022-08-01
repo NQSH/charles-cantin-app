@@ -34,7 +34,6 @@
 
 @media only screen and (max-width: 1360px) {
   .container {
-    /* min-width: 182px; */
     min-width: calc(182 / 414 * 100%);
     min-height: 93px;
   }
