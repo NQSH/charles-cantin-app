@@ -8,6 +8,7 @@ export default function Footer({}) {
     <div
       className={styles.container}
       data-disabled={currentMenu.id !== "home" && currentMenu.id !== "contact"}
+      data-iscurrentcontact={currentMenu.id === "contact"}
     >
       <p className={styles.copyright}>
         Copyright © Charles Cantin. Tous droits réservé
