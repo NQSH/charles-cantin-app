@@ -34,5 +34,24 @@
 }
 
 @media only screen and (max-width: 1360px) {
-  
+  .wrapper {
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+
+  .title {
+    flex: 1 0 100%;
+    order: 1;
+  }
+
+  .price {
+    flex: 1 0 100%;
+    order: 3;
+  }
+
+  .description {
+    flex: 1 0 100%;
+    order: 2;
+    margin-top: 0px;
+  }
 }
