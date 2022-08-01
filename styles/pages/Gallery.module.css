@@ -13,5 +13,6 @@
   .container {
     align-content: flex-start;
     padding: 0px;
+    overflow: visible;
   }
 }
