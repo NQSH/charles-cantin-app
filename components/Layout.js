@@ -4,6 +4,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Head from "next/head";
 
+import { AnimatePresence } from "framer-motion";
+
 export default function Layout({ children }) {
   return (
     <div className={styles.container}>
@@ -11,9 +13,11 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />
-      <main className={styles.main}>
-        {children}
-      </main>
+      <AnimatePresence exitBeforeEnter>
+        <main className={styles.main}>
+          {children}
+        </main>
+      </AnimatePresence>
       <Footer />
     </div>
   );
