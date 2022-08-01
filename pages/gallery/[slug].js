@@ -3,11 +3,17 @@ import styles from "@styles/pages/GalleryDetail.module.css";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 export default function PhotoPage({ title, image, category, published_at }) {
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.container}
+    >
       <div className={styles.wrapper}>
         <div className={styles.image_container}>
           <img className={styles.image} src={`/${image}`} />
@@ -16,7 +22,7 @@ export default function PhotoPage({ title, image, category, published_at }) {
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.date}>{`Le ${new Intl.DateTimeFormat('fr-FR').format(new Date(published_at))}`}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

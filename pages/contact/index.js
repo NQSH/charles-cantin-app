@@ -4,12 +4,19 @@ import InputText from "@components/InputText";
 import InputTextArea from "@components/InputTextArea";
 import { useRouter } from "next/router";
 
+import { motion } from "framer-motion";
+
 export default function Contact({}) {
   const router = useRouter();
   const { query } = router;
   
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.container}
+    >
       <div className={styles.wrapper}>
         <p className={styles.text}>
           Pour toutes informations complémentaires ou demandes de RDV, merci de me contacter via le formulaire ci-dessous.
@@ -44,6 +51,6 @@ export default function Contact({}) {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }

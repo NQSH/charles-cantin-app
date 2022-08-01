@@ -9,28 +9,30 @@ import { useNavigation } from "context/navigation";
 import Head from "next/head";
 import Link from "next/link";
 
+import { motion }  from "framer-motion";
+
 export default function Home({ backgroundImage }) {
   const { handleSetCurrentMenu } = useNavigation();
 
   return (
-    <div style={{ flex: 1 }}>
-      <Head>
-        <title>Accueil</title>
-      </Head>
-      <div className={styles.container}>
-        <div className={styles.background} style={{ backgroundImage: `url(${backgroundImage})` }} />
-        <span className={styles.title_wrapper}>
-          <h2 className={styles.title_name}>Charles Cantin</h2>
-          <span className={styles.title_hyphen}>{` - `}</span>
-          <span className={styles.title_job}>Photographe</span>
-        </span>
-        <Link href={`/gallery`}>
-          <a className={styles.gallery_link} onClick={() => handleSetCurrentMenu("gallery")}>
-            <p className={styles.gallery_link_text}>Visiter la galerie</p>
-          </a>
-        </Link>
-      </div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.container}
+    >
+      <div className={styles.background} style={{ backgroundImage: `url(${backgroundImage})` }} />
+      <span className={styles.title_wrapper}>
+        <h2 className={styles.title_name}>Charles Cantin</h2>
+        <span className={styles.title_hyphen}>{` - `}</span>
+        <span className={styles.title_job}>Photographe</span>
+      </span>
+      <Link href={`/gallery`}>
+        <a className={styles.gallery_link} onClick={() => handleSetCurrentMenu("gallery")}>
+          <p className={styles.gallery_link_text}>Visiter la galerie</p>
+        </a>
+      </Link>
+    </motion.div>
   );
 }
 

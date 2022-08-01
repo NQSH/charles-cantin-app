@@ -9,11 +9,18 @@ import Album from "@components/Album";
 import FilterList from "@components/FilterList";
 import { useFilters } from "context/filters";
 
+import { motion } from "framer-motion";
+
 export default function Gallery({ photos, categories, years }) {
   const { filters, handleOnPressCategory, handleOnPressYear, handleDeleteCategoryFilters, handleDeleteYearFilters } = useFilters();
   
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.container}
+    >
       <FilterList
         title={`Catégories`}
         filters={categories.map(category => category.name)}
@@ -29,7 +36,7 @@ export default function Gallery({ photos, categories, years }) {
         selectedFilters={filters.years}
         deleteFiltersHandler={handleDeleteYearFilters}
       />
-    </div>
+    </motion.div>
   );
 }
 

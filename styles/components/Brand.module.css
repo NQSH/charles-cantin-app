@@ -1,3 +1,40 @@
+.container {
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+.container[data-iscurrenthome="true"] {
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+.logo_container {
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+.logo_container[data-iscurrenthome="true"] {
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+.link {
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+.link[data-iscurrenthome="true"] {
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
 .container[data-iscurrenthome="true"] {
   position: absolute;
   top: 149px;

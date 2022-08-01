@@ -5,9 +5,16 @@ import path from "path";
 import matter from "gray-matter";
 import Service from "@components/Service";
 
+import { motion } from "framer-motion";
+
 export default function Pricing({ services }) {
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.container}
+    >
       <div className={styles.wrapper}>
         {
           services.map((service, index) => {
@@ -20,7 +27,7 @@ export default function Pricing({ services }) {
           })
         }
       </div>
-    </div>
+    </motion.div>
   );
 }
 
