@@ -14,7 +14,7 @@ export default function FilterList({ title, filters, side, onClickHandler, selec
     <div className={styles.container}>
       <h2 className={styles.title} onClick={handleToggleOpen}>
         {title}
-        <div className={styles.title_arrow} />
+        <div className={styles.title_arrow} data-isopenned={isOpenned} />
       </h2>
       <ul className={styles.list} data-isopenned={isOpenned}>
         {
