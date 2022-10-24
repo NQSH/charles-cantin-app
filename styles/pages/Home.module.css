@@ -19,7 +19,6 @@
   height: 100%;
   background-position: center;
   filter: brightness(.5);
-  z-index: -1;
 }
 
 .title_wrapper {
@@ -29,6 +28,7 @@
   align-items: baseline;
   font-size: 70px;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, .5);
+  z-index: 1;
 }
 .title_name {
   font-family: Staatliches;
