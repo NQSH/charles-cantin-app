@@ -15,6 +15,10 @@ export default function InputText({ label, name, errorMessage, pattern }) {
     }
   }
 
+  React.useEffect(() => {
+    ref.current.setCustomValidity(errorMessage);
+  }, [])
+
   return (
     <div className={styles.container}>
       <label
@@ -33,6 +37,7 @@ export default function InputText({ label, name, errorMessage, pattern }) {
         onBlur={() => isFocusedChange(false)}
         onChange={handleChangeValue}
         ref={ref}
+        required
       />
     </div>
   );
